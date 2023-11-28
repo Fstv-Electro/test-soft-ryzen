@@ -15,7 +15,7 @@ export const Banner = () => {
                 <Link href='mailto:office@ecosolution.com' className={styles.addressText}>office@ecosolution.com</Link>
             </address>
             <div className={styles.imageContainer}>
-                <Image src='/image/wind-turbine-banner.jpg' alt="wind-turbines-with-nature" fill className={styles.image } />
+                <Image src='/image/wind-turbine-banner.jpg' alt="wind-turbines-with-nature" fill />
             </div>
         </div>
     )

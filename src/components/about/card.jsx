@@ -1,6 +1,6 @@
-import styles from './cases.module.css';
+import styles from './about.module.css';
 
-export const CasesCard = ({icon, title, desc}) => {
+export const AboutCard = ({icon, title, desc}) => {
     return (
         <>
             <div className={styles.cardTitleContainer}>

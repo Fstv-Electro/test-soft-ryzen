@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Header } from "@/components/header/header";
 import { Banner } from "@/components/banner/banner";
+import { About } from "@/components/about/about";
+import { MainSection } from "@/components/main/main";
 import { Cases } from "@/components/cases/cases";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,6 +21,8 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <Header />
         <Banner />
+        <MainSection />
+        <About />
         <Cases />
       </main>
     </>
