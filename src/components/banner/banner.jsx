@@ -5,7 +5,7 @@ import styles from './banner.module.css';
 
 export const Banner = () => {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id='banner'>
             <h1 className={styles.title}>RENEWABLE ENERGY FOR ANY TASK</h1>
             <p className={styles.desc}>Development and implementation of renewable non-polluting energy sources, generating power generation using energy wind, sun, water, biomass</p>
             <Link href='#cases' className={styles.sectionLink}>Learn more <div className={styles.arrowContainer}><ArrowRight /></div></Link>

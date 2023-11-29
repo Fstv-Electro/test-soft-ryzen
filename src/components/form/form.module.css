@@ -39,3 +39,28 @@
   letter-spacing: -0.72px;
   color: #173d33;
 }
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-end;
+  margin-right: 12px;
+  font-size: 16px;
+    line-height: 18px;/* 112.5% */
+    letter-spacing: -0.64px;
+  width: 100px;
+  height: 40px;
+  padding: 4px 4px 4px 16px;
+  border-radius: 500px;
+  border: 1px solid #97D28B;
+  background-color: transparent;
+}
+
+.btn svg {
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  background-color: #97D28B;
+}

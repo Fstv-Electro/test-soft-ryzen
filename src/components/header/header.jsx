@@ -1,8 +1,7 @@
-import Logo from '../../../public/icons/Logo.svg';
+import { Logo } from '@/atoms/logo';
 import Facebook from '../../../public/icons/Facebook.svg';
 import Instagram from '../../../public/icons/Instagram.svg';
 import Burger from '../../../public/icons/Menu.svg';
-import Ellipse from '../../../public/icons/Ellipse.svg'
 import Close from '../../../public/icons/Closemenu.svg'
 import Link from 'next/link';
 
@@ -23,11 +22,7 @@ export const Header = () => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.logoContainer}>
-                <Logo />
-                <span className={styles.logoText}>ecosolution</span>
-                <div className={styles.textGreenEnergy}><p><span className={styles.textGreen}>green</span>enry</p>for life</div>
-            </div>
+            <Logo />
             <nav className={styles.navContainer}>
                 <button className={styles.navMenuBtn} onClick={toggleModal}><Burger/></button>
                 <ContactLink text={'Get in touch'} classLink={styles.contactsLink} classText={styles.linkText}/>

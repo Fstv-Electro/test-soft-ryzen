@@ -8,6 +8,7 @@ import { MainSection } from "@/components/main/main";
 import { Cases } from "@/components/cases/cases";
 import { Faq } from "@/components/faq/faq";
 import { Contacts } from "@/components/contacts/contacts";
+import { Footer } from "@/components/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function Home() {
         <Cases />
         <Faq />
         <Contacts />
+        <Footer/>
       </main>
     </>
   );

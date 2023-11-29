@@ -1,5 +1,6 @@
 'use client'
 import { useForm } from 'react-hook-form';
+import ArrowRight from '../../../public/icons/Arrow-right.svg';
 import styles from './form.module.css';
 
 export const Form = () => {
@@ -28,9 +29,9 @@ export const Form = () => {
             </div>
             <div className={styles.formItem}>
                 <label className={styles.label}>Message:</label>
-                <input type="text" {...register('message')} placeholder='My message...' className={styles.input}/>
+                <input type="text" {...register('message')} placeholder='My message...' className={styles.input} style={{ height: '147px'}}/>
             </div>
-            <button type='submit'>Send</button>
+            <button type='submit' className={styles.btn}>Send <ArrowRight/></button>
         </form>
     )
 }
