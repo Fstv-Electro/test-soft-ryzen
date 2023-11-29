@@ -6,6 +6,8 @@ import { Banner } from "@/components/banner/banner";
 import { About } from "@/components/about/about";
 import { MainSection } from "@/components/main/main";
 import { Cases } from "@/components/cases/cases";
+import { Faq } from "@/components/faq/faq";
+import { Contacts } from "@/components/contacts/contacts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +26,8 @@ export default function Home() {
         <MainSection />
         <About />
         <Cases />
+        <Faq />
+        <Contacts />
       </main>
     </>
   );

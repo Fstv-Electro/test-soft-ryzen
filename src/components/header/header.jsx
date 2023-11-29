@@ -1,14 +1,16 @@
 import Logo from '../../../public/icons/Logo.svg';
 import Facebook from '../../../public/icons/Facebook.svg';
 import Instagram from '../../../public/icons/Instagram.svg';
-import ArrowTopRight from '../../../public/icons/Arrow-top-right.svg'
 import Burger from '../../../public/icons/Menu.svg';
 import Ellipse from '../../../public/icons/Ellipse.svg'
 import Close from '../../../public/icons/Closemenu.svg'
 import Link from 'next/link';
+
+import { ContactLink } from '../../atoms/contactLink';
 import { GoArrowUpRight } from "react-icons/go";
-import styles from './header.module.css';
 import { useRef, useState } from 'react';
+
+import styles from './header.module.css';
 
 
 export const Header = () => {
@@ -28,7 +30,7 @@ export const Header = () => {
             </div>
             <nav className={styles.navContainer}>
                 <button className={styles.navMenuBtn} onClick={toggleModal}><Burger/></button>
-                <Link href='#contacts' className={styles.contactsLink}><p className={styles.linkText}>Get in touch</p><Ellipse/></Link>
+                <ContactLink text={'Get in touch'} classLink={styles.contactsLink} classText={styles.linkText}/>
             </nav>
             {isOpen && (
                 <div ref={modalRef} className={styles.backdrop}>

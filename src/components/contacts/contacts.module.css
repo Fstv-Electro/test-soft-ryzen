@@ -1,0 +1,67 @@
+.container {
+  width: 100%;
+  height: 408px;
+  margin-top: 36px;
+  overflow: hidden;
+  height: auto;
+}
+
+.title {
+  text-align: start;
+  font-size: 28px;
+  line-height: 28px; /* 100% */
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.itemTitle {
+  font-size: 16px;
+  letter-spacing: -0.64px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 20px;
+  letter-spacing: -0.8px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.socialInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.social svg {
+  color: #173d33;
+}

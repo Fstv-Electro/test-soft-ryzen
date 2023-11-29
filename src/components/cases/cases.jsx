@@ -122,7 +122,6 @@ export const Cases = () => {
         sliderRef.current.slickNext();
     };
 
-    console.log(sliderRef.current);
 
     return (
         <div className={styles.container} id="cases">

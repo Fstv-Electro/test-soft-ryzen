@@ -1,0 +1,103 @@
+.container {
+  width: 100%;
+  height: 408px;
+  margin-top: 36px;
+  overflow: hidden;
+  height: auto;
+}
+
+.title {
+  text-align: start;
+  font-size: 28px;
+  line-height: 28px; /* 100% */
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.faqList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.faqItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #97d28b;
+}
+
+.faqItemContainer {
+}
+
+.faqBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  letter-spacing: -0.72px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.statusQuestion {
+  width: 16px;
+  height: 100%;
+  align-self: flex-start;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 16px;
+  width: 100%;
+}
+
+.answer {
+  font-size: 14px;
+  letter-spacing: -0.56px;
+}
+
+.faqContacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactTitle {
+  font-size: 18px;
+  letter-spacing: -0.72px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.contactsLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 140px;
+  height: 40px;
+  padding: 10px 16px;
+  border-radius: 500px;
+  background-color: #97d28b;
+}
+
+.linkText {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.64px;
+}
