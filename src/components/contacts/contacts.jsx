@@ -4,6 +4,7 @@ import Map from '../../../public/icons/Contacts-map.svg';
 import Facebook from '../../../public/icons/Facebook.svg';
 import Instagram from '../../../public/icons/Instagram.svg';
 import Link from 'next/link';
+import { Form } from '../form/form';
 
 import styles from './contacts.module.css';
 
@@ -47,6 +48,7 @@ export const Contacts = () => {
                     </div>
                 </li>
             </ul>
+            <Form/>
         </div>
     )
 }

@@ -39,11 +39,11 @@ export const Header = () => {
                         <div className={styles.modalLine}></div>
                         <div className={styles.modalNavContainer}>
                             <nav className={styles.modalNav}>
-                            <Link href='#main' className={styles.modalLink}>Main <GoArrowUpRight /></Link>
-                            <Link href='#about' className={styles.modalLink}>About <GoArrowUpRight /></Link>
-                            <Link href='#cases' className={styles.modalLink}>Cases <GoArrowUpRight /></Link>
-                            <Link href='#faq' className={styles.modalLink}>FAQ <GoArrowUpRight /></Link>
-                            <Link href='#contacts' className={styles.modalLink}>Contact Us <GoArrowUpRight /></Link>
+                            <Link href='/#main' className={styles.modalLink}>Main <GoArrowUpRight /></Link>
+                            <Link href='/#about' className={styles.modalLink}>About <GoArrowUpRight /></Link>
+                            <Link href='/#cases' className={styles.modalLink}>Cases <GoArrowUpRight /></Link>
+                            <Link href='/#faq' className={styles.modalLink}>FAQ <GoArrowUpRight /></Link>
+                            <Link href='/#contacts' className={styles.modalLink}>Contact Us <GoArrowUpRight /></Link>
                             </nav>
                             <div className={styles.modalSocials}>
                                 <Facebook />
