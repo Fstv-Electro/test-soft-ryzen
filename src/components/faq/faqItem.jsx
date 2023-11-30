@@ -2,19 +2,19 @@ import { useState } from "react";
 import styles from './faq.module.css';
 
 export const FaqItem = ({ question, answer }) => {
-    const [isActive, setIsActive] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const toggleActive = () => {
-        setIsActive(!isActive);
+        setIsOpen(!isOpen);
     };
 
     return (
         <div className={styles.faqItemContainer}>
             <button className={styles.faqBtn} type="button" onClick={toggleActive}>
-                <span className={styles.statusQuestion}>{isActive ? '-' : '+'}</span>
+                <span className={styles.statusQuestion} style={{color: isOpen ? '#173D33' : '#97d28b'}}>{isOpen ? '-' : '+'}</span>
                 <div  className={styles.question}>
                     {question}
-                    {isActive && <p  className={styles.answer}>{answer}</p>}
+                    {isOpen && <p  className={styles.answer}>{answer}</p>}
                 </div>
             </button>
         </div>

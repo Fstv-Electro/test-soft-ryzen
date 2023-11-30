@@ -1,8 +1,11 @@
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  width: 100%;
+  max-width: 480px;
   margin-top: 36px;
   margin-bottom: 24px;
 }
@@ -10,13 +13,44 @@
 .title {
   text-align: start;
   font-size: 28px;
-  font-weight: 400;
   line-height: 28px; /* 100% */
   text-transform: uppercase;
 }
 
+.verticalLine {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 1px;
+  transform: translateX(-50%);
+  border: 1px solid #97d28b;
+}
+
 .desc {
   font-size: 16px;
-  font-weight: 400;
   letter-spacing: -0.64px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 768px;
+  }
+
+  .desc {
+    max-width: 340px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  .desc {
+    max-width: 460px;
+  }
 }

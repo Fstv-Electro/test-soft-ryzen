@@ -9,26 +9,26 @@ const cardData = [
     {
         id: 1,
         icon: <Circle />,
-        title: 'Openenrs',
+        title: 'Opennes',
         desc: 'to the world, people, new ideas and projects'
     },
     {
         id: 2,
         icon: <Global />,
-        title: 'Openenrs',
-        desc: 'to the world, people, new ideas and projects'
+        title: 'Responsibility',
+        desc: 'we are aware that the results of our work have an impact on our lives and the lives of future generations'
     },
     {
         id: 3,
         icon: <Cpu />,
-        title: 'Openenrs',
-        desc: 'to the world, people, new ideas and projects'
+        title: 'Innovation',
+        desc: 'we use the latest technology to implement non-standard solutions'
     },
     {
         id: 4,
         icon: <Rank />,
-        title: 'Openenrs',
-        desc: 'to the world, people, new ideas and projects'
+        title: 'Quality',
+        desc: 'we do not strive to be the first among others, but we want to be the best in our business'
     },
 ]
 
