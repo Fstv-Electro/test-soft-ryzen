@@ -1,7 +1,7 @@
 'use client'
 import Slider from 'react-slick';
 import { CasesCard } from './casesCard';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import ArrowRight from '../../../public/icons/Arrow-right-slider.svg';
 import styles from './cases.module.css';
 
@@ -85,10 +85,7 @@ export const Cases = () => {
     adaptiveHeight: true,
     initialSlide: 0,
     arrows: false,
-        draggable: true,
-        appendDots: (dots) => {
-            setDotsy(...dots)
-    },
+    draggable: true,
     afterChange: (index) => {
         setCurrentSlide(index)
     },
@@ -125,16 +122,19 @@ export const Cases = () => {
 
     return (
         <div className={styles.container} id="cases">
-            <h2 className={styles.title}>Successful cases of our company</h2>
-            <div className={styles.slideSwitchers}>
-                <p><span className={styles.slideCurrentText}>{currentSlide === 5 ? currentSlide : currentSlide + 1}</span> / {slidesData.length}</p>
-                <div className={styles.slideBtns}>
-                    <button className={styles.slideBtnLeft} type='button' onClick={prevSlide}><ArrowRight/></button>
-                    <button className={styles.slideBtn} type='button' onClick={nextSlide}><ArrowRight/></button>
+            <div className={styles.titleContainer}>
+                <h2 className={styles.title}>Successful cases of our company</h2>
+                <div className={styles.verticalLine}></div>
+                <div className={styles.slideSwitchers}>
+                    <p><span className={styles.slideCurrentText}>{currentSlide === 5 ? currentSlide : currentSlide + 1}</span> / {slidesData.length}</p>
+                    <div className={styles.slideBtns}>
+                        <button className={styles.slideBtnLeft} type='button' onClick={prevSlide}><ArrowRight/></button>
+                        <button className={styles.slideBtn} type='button' onClick={nextSlide}><ArrowRight/></button>
+                    </div>
                 </div>
             </div>
 
-            <Slider {...slideSetting} ref={sliderRef} >
+            <Slider {...slideSetting} ref={sliderRef}>
                 {slidesData.map(item => (
                     <div key={item.id}>
                         <CasesCard  image={item.image} region={item.region} date={item.date} caseDisc={item.caseDisc} caseLink={() => nextSlide()}/>

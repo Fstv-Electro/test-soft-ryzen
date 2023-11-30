@@ -6,12 +6,28 @@
   height: auto;
 }
 
+.titleContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
 .title {
   text-align: start;
   font-size: 28px;
   line-height: 28px; /* 100% */
   text-transform: uppercase;
-  margin-bottom: 24px;
+}
+
+.verticalLine {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 1px;
+  border: 1px solid #97d28b;
+  background-color: #97d28b;
 }
 
 .slideSwitchers {
@@ -23,7 +39,6 @@
   letter-spacing: -1.12px;
   padding: 0 24px;
   color: rgba(23, 61, 51, 0.25);
-  margin-bottom: 24px;
 }
 
 .slideCurrentText {
@@ -121,7 +136,6 @@
   padding: 16px;
   border-radius: 100px;
   border: transparent;
-  /* color: #173d33; */
   background: #97d28b;
 }
 
@@ -142,4 +156,62 @@
   height: 168px;
   overflow: hidden;
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .verticalLine {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin-top: 100px;
+  }
+  .titleContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  .title {
+    width: 264px;
+  }
+  .slideSwitchers {
+    padding: 0;
+    padding-right: 8px;
+    width: 342px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    margin-top: 120px;
+  }
+  .imageContainer {
+    min-height: 296px;
+  }
+  .cardContainer {
+    height: 504px;
+  }
+  .titleContainer {
+    margin-bottom: 120px;
+  }
+
+  .title {
+    width: 396px;
+  }
+  .slideSwitchers {
+    padding-right: 24px;
+    width: 500px;
+  }
+
+  .slideBtnLeft,
+  .slideBtn {
+    width: 84px;
+    height: 84px;
+    padding: 24px;
+  }
 }

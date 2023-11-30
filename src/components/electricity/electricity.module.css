@@ -1,0 +1,47 @@
+.attentionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.attentionTitle {
+  text-align: center;
+  font-size: 28px;
+  line-height: 28px; /* 100% */
+  text-transform: uppercase;
+}
+
+.verticalLine {
+  width: 1px;
+  height: 48px;
+  background-color: #97d28b;
+}
+
+.attentionDesc {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.attentionNumbers {
+  color: #97d28b;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px; /* 100% */
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    margin-top: 120px;
+  }
+}

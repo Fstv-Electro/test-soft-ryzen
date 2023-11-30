@@ -6,6 +6,12 @@
   height: auto;
 }
 
+.contactFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .title {
   text-align: center;
   font-size: 28px;
@@ -20,6 +26,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+  margin-bottom: 24px;
 }
 
 .item {
@@ -64,4 +71,31 @@
 
 .social svg {
   color: #173d33;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin-top: 100px;
+  }
+  .contactFormContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+  .list {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    margin-top: 120px;
+  }
+  .title {
+    margin-bottom: 120px;
+  }
 }

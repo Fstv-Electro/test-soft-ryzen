@@ -2,6 +2,7 @@ import Circle from '../../../public/icons/Features-maximize-circle.svg';
 import Rank from '../../../public/icons/Features-ranking.svg';
 import Global from '../../../public/icons/Features-global-edit.svg';
 import Cpu from '../../../public/icons/Features-cpu-charge.svg';
+import Image from 'next/image';
 import { AboutCard } from './card';
 import styles from './about.module.css';
 
@@ -35,16 +36,16 @@ const cardData = [
 export const About = () => {
     return (
         <div className={styles.container} id='about'>
-            {cardData && cardData.map(item => (
-                <div className={styles.card} key={item.id}>
-                    <AboutCard icon={item.icon} title={item.title} desc={item.desc} />
-                </div>
-            ))}
-            <div className={styles.attentionContainer}>
-                <h2 className={styles.attentionTitle}>Electricity we produced for all time</h2>
-                <div className={styles.verticalLine}></div>
-                <p className={styles.attentionDesc}><span className={styles.attentionNumbers}>1.134.147.814</span> kWh</p>
+            <AboutCard icon={cardData[0].icon} title={cardData[0].title} desc={cardData[0].desc} />
+            <AboutCard icon={cardData[1].icon} title={cardData[1].title} desc={cardData[1].desc} />
+            <div className={`${styles.imageContainer} ${styles.firstImg}`}>
+                <Image src='/image/about1.jpg' alt="wind farms fields" fill />
             </div>
+            <div className={`${styles.imageContainer} ${styles.secondImg}`}>
+                <Image src='/image/about2.jpg' alt="man worker firld by solar panels" fill />
+            </div>
+            <AboutCard icon={cardData[2].icon} title={cardData[2].title} desc={cardData[2].desc} />
+            <AboutCard icon={cardData[3].icon} title={cardData[3].title} desc={cardData[3].desc} />
         </div>
     )
 }

@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&family=Oswald:wght@400;700&display=swap");
+
 :root {
   --max-width: 1280px;
   --border-radius: 12px;
+  --font-family-oswald: "Oswald", sans-serif;
+  --font-family-Fira: "Fira Sans", sans-serif;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -17,7 +21,15 @@ body {
   max-width: 100vw;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-family-oswald);
+}
+
 body {
+  font-family: var(--font-family-Fira);
   color: #173d33;
   background: #f3f5fa;
 }
@@ -43,8 +55,6 @@ a {
 }
 
 .slick-slide {
-  /* width: 100%; */
-  /* padding: 0 20px; */
 }
 
 .slick-track {
@@ -53,29 +63,15 @@ a {
   flex-wrap: nowrap;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 360px) and (max-width: 480px) {
   .slick-slide {
-    padding: 0 24px;
-  }
-
-  .slick-slide div {
-    width: 596px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .slick-slide {
-    padding: 0 12px;
-  }
-
-  .slick-slide div {
-    width: 342px;
+    /* padding: 0 12px; */
   }
 }
 
 @media screen and (min-width: 480px) {
   .slick-slide {
-    padding: 0 12px;
+    /* padding: 0 12px; */
   }
 
   .slick-slide div {
@@ -83,8 +79,25 @@ a {
   }
 }
 
-@media screen and (min-width: 360px) and (max-width: 480px) {
+@media screen and (min-width: 768px) {
   .slick-slide {
-    padding: 0 12px;
+    /* padding: 0 12px; */
+  }
+
+  .slick-slide div {
+    width: 342px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .slick-slide {
+    /* padding: 0 24px; */
+    margin: 0 auto;
+  }
+
+  .slick-slide div {
+    /* width: 596px; */
+    width: 100%;
+    max-width: 596px;
   }
 }

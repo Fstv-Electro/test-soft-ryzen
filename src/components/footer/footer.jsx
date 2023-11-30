@@ -12,20 +12,20 @@ export const Footer = () => {
     return (
         <div className={styles.container} id='footer'>
             <div className={styles.logotype} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%'}}>
-
-                    <Logo />
-
+                <Logo />
                 <Link href='/#banner' className={styles.linkUp}><ArrowRight/></Link>
             </div>
             <div className={styles.socials}>
                 <Facebook />
                 <Instagram />
             </div>
-            <address>
-                79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
-            </address>
-            <Link href='mailto:office@ecosolution.com'>office@ecosolution.com</Link>
-            <p>ecosolution © 2023</p>
+            <Link href='/#banner' className={styles.secondLinkUp}><ArrowRight/></Link>
+                <address className={styles.address}>
+                    79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
+                </address>
+                <Link href='mailto:office@ecosolution.com'>office@ecosolution.com</Link>
+                <p className={styles.copyright}>ecosolution © 2023</p>
+
         </div>
     )
 }

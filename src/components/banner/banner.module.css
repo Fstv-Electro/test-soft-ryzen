@@ -67,6 +67,7 @@
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .container {
     max-width: 768px;
+    margin-top: calc(24px + 36px + 164px);
   }
 
   .imageContainer {
@@ -78,6 +79,7 @@
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
+    margin-top: calc(24px + 36px + 200px);
   }
 
   .imageContainer {
