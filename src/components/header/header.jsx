@@ -25,7 +25,7 @@ export const Header = () => {
             <Logo />
             <nav className={styles.navContainer}>
                 <button className={styles.navMenuBtn} onClick={toggleModal}><Burger/></button>
-                <ContactLink text={'Get in touch'} classLink={styles.contactsLink} classText={styles.linkText}/>
+                <ContactLink text={'Get in touch'} classLink={styles.contactsLink} classText={styles.linkText} classIcon={styles.icon}/>
             </nav>
             {isOpen && (
                 <div ref={modalRef} className={styles.backdrop}>

@@ -110,6 +110,32 @@
   letter-spacing: -0.64px;
 }
 
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #173d33;
+  rotate: 90deg;
+}
+
+.icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.contactsLink:hover {
+  color: #97d28b;
+  background-color: #173d33;
+}
+
+.contactsLink:hover .icon {
+  color: #173d33;
+  background-color: #97d28b;
+}
+
 .secondTitle {
   text-align: start;
   font-size: 28px;
@@ -135,6 +161,10 @@
   .title {
     display: none;
   }
+  .secondTitle {
+    font-size: 36px;
+    line-height: 36px;
+  }
 
   .faqList {
     width: calc(50% - 12px);
@@ -146,8 +176,24 @@
     max-width: 1280px;
     margin-top: 120px;
   }
+  .secondTitle {
+    font-size: 48px;
+    line-height: 48px;
+  }
   .contactContainer {
     text-align: center;
     margin: 0 auto;
+  }
+  .question {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+  }
+  .contactTitle {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+  }
+  .answer {
+    font-size: 16px;
+    letter-spacing: -0.64px;
   }
 }

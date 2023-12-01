@@ -4,6 +4,7 @@
   align-items: flex-start;
   gap: 28px;
   width: 100%;
+  max-width: 480px;
   padding: 36px 12px;
   background-color: #eaedf1;
 }
@@ -65,15 +66,25 @@
   background-color: #97d28b;
 }
 
+.btn:hover {
+  color: #97d28b;
+  background-color: #173d33;
+  border: #173d33;
+}
+
+.btn:hover svg {
+  color: #173d33;
+}
+
 @media screen and (min-width: 768px) {
   .formContainer {
     width: 50%;
   }
 }
 
-/* @media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-    margin-top: 120px;
+@media screen and (min-width: 1280px) {
+  .input {
+    font-size: 20px;
+    letter-spacing: -0.8px;
   }
-} */
+}

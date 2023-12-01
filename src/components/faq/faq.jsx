@@ -40,7 +40,7 @@ export const Faq = () => {
     }
 
     return (
-        <div className={styles.container} id="faq">
+        <section className={styles.container} id="faq">
             <h2 className={styles.title}>Frequently Asked Questions</h2>
             <ul className={styles.faqList}>
                 {faqData && faqData.map((item, index) => (
@@ -54,9 +54,9 @@ export const Faq = () => {
                 <h2 className={styles.secondTitle}>Frequently Asked Questions</h2>
                 <div className={styles.faqContacts}>
                     <h3 className={styles.contactTitle}>Didn&apos;t find the answer to your question?</h3>
-                    <ContactLink text={'Contact Us'} classLink={styles.contactsLink} classText={styles.linkText}/>
+                    <ContactLink text={'Contact Us'} classLink={styles.contactsLink} classText={styles.linkText} classIcon={styles.icon}/>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

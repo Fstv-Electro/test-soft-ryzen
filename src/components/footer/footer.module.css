@@ -29,9 +29,20 @@
   transform: rotate(-90deg);
 }
 
+.linkUp:hover svg,
+.secondLinkUp:hover svg {
+  color: #97d28b;
+  background-color: #173d33;
+}
+
 .socials {
+  display: flex;
   gap: 8px;
   justify-self: center;
+}
+
+.social:hover svg {
+  color: #97d28b;
 }
 
 @media screen and (min-width: 480px) {

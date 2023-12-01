@@ -37,11 +37,32 @@
     max-width: 768px;
     margin-top: 100px;
   }
+  .attentionTitle {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .verticalLine {
+    height: 87px;
+  }
+  .attentionNumbers {
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 100px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
     margin-top: 120px;
+  }
+  .attentionTitle {
+    line-height: 48px;
+    line-height: 48px;
+  }
+  .attentionNumbers {
+    font-size: 164px;
+    font-weight: 700;
+    line-height: 164px;
   }
 }

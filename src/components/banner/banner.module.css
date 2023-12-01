@@ -48,6 +48,16 @@
   border: 1px solid #97d28b;
 }
 
+.sectionLink:hover {
+  border: #173d33;
+  background-color: #173d33;
+  color: #97d28b;
+}
+
+.sectionLink:hover svg {
+  color: #173d33;
+}
+
 .arrowContainer {
   display: flex;
   padding: 8px;
@@ -55,6 +65,11 @@
   align-items: center;
   border-radius: 100px;
   background-color: #97d28b;
+}
+
+.arrowContainer svg {
+  width: 16px;
+  height: 16px;
 }
 
 .line {
@@ -68,6 +83,7 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  width: 100%;
 }
 
 .addressText {
@@ -83,6 +99,12 @@
   height: 200px;
   overflow: hidden;
   margin-top: 36px;
+}
+
+@media screen and (max-width: 768px) {
+  .copyright {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -108,11 +130,19 @@
     height: 348px;
   }
   .title {
+    font-size: 48px;
+    line-height: 48px;
     width: 300px;
   }
   .sectionLink {
     align-self: flex-start;
   }
+  .copyright {
+    text-align: end;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
   .address {
     flex-direction: row;
     justify-content: space-between;
@@ -132,9 +162,27 @@
     height: 524px;
   }
   .title {
+    font-size: 64px;
+    line-height: 64px;
     width: 485px;
   }
   .bannerDesc {
     width: 362px;
+  }
+
+  .address {
+    flex-direction: row;
+  }
+
+  .addressText {
+    flex: 2;
+  }
+  .mail,
+  .copyright {
+    flex: 1;
+  }
+
+  .mail {
+    text-align: center;
   }
 }

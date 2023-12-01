@@ -35,7 +35,7 @@ const cardData = [
 
 export const About = () => {
     return (
-        <div className={styles.container} id='about'>
+        <section className={styles.container} id='about'>
             <AboutCard icon={cardData[0].icon} title={cardData[0].title} desc={cardData[0].desc} />
             <AboutCard icon={cardData[1].icon} title={cardData[1].title} desc={cardData[1].desc} />
             <div className={`${styles.imageContainer} ${styles.firstImg}`}>
@@ -46,6 +46,6 @@ export const About = () => {
             </div>
             <AboutCard icon={cardData[2].icon} title={cardData[2].title} desc={cardData[2].desc} />
             <AboutCard icon={cardData[3].icon} title={cardData[3].title} desc={cardData[3].desc} />
-        </div>
+        </section>
     )
 }

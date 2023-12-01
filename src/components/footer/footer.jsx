@@ -10,14 +10,18 @@ export const Footer = () => {
 
 
     return (
-        <div className={styles.container} id='footer'>
+        <footer className={styles.container} id='footer'>
             <div className={styles.logotype} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%'}}>
                 <Logo />
                 <Link href='/#banner' className={styles.linkUp}><ArrowRight/></Link>
             </div>
             <div className={styles.socials}>
-                <Facebook />
-                <Instagram />
+                <div className={styles.social}>
+                    <Facebook />
+                </div>
+                <div className={styles.social}>
+                    <Instagram />
+                </div>
             </div>
             <Link href='/#banner' className={styles.secondLinkUp}><ArrowRight/></Link>
                 <address className={styles.address}>
@@ -26,6 +30,6 @@ export const Footer = () => {
                 <Link href='mailto:office@ecosolution.com'>office@ecosolution.com</Link>
                 <p className={styles.copyright}>ecosolution © 2023</p>
 
-        </div>
+        </footer>
     )
 }

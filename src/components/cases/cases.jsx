@@ -121,7 +121,7 @@ export const Cases = () => {
 
 
     return (
-        <div className={styles.container} id="cases">
+        <section className={styles.container} id="cases">
             <div className={styles.titleContainer}>
                 <h2 className={styles.title}>Successful cases of our company</h2>
                 <div className={styles.verticalLine}></div>
@@ -142,7 +142,7 @@ export const Cases = () => {
                 ))}
                 
             </Slider>
-        </div>
+        </section>
     )
 }
 

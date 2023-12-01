@@ -13,7 +13,7 @@ export const Contacts = () => {
 
 
     return (
-        <div className={styles.container} id='contacts'>
+        <section className={styles.container} id='contacts'>
             <h2 className={styles.title}>Contact Us</h2>
 
             <div className={styles.contactFormContainer}>
@@ -51,6 +51,6 @@ export const Contacts = () => {
                 </ul>
                 <Form/>
             </div>
-        </div>
+        </section>
     )
 }

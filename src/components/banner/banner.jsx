@@ -5,7 +5,7 @@ import styles from './banner.module.css';
 
 export const Banner = () => {
     return (
-        <div className={styles.container} id='banner'>
+        <section className={styles.container} id='banner'>
             <div className={styles.banner}>
                 <h1 className={styles.title}>RENEWABLE ENERGY FOR ANY TASK</h1>
                 <div className={styles.bannerDesc}>
@@ -22,6 +22,6 @@ export const Banner = () => {
             <div className={styles.imageContainer}>
                 <Image src='/image/wind-turbine-banner.jpg' alt="wind-turbines-with-nature" fill />
             </div>
-        </div>
+        </section>
     )
 }
