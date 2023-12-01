@@ -4,6 +4,7 @@ import Global from '../../../public/icons/Features-global-edit.svg';
 import Cpu from '../../../public/icons/Features-cpu-charge.svg';
 import Image from 'next/image';
 import { AboutCard } from './card';
+import { Container } from '@/hooks/observer';
 import styles from './about.module.css';
 
 const cardData = [
@@ -35,7 +36,7 @@ const cardData = [
 
 export const About = () => {
     return (
-        <section className={styles.container} id='about'>
+        <Container classContainer={styles.container} sectionName={'about'}>
             <AboutCard icon={cardData[0].icon} title={cardData[0].title} desc={cardData[0].desc} />
             <AboutCard icon={cardData[1].icon} title={cardData[1].title} desc={cardData[1].desc} />
             <div className={`${styles.imageContainer} ${styles.firstImg}`}>
@@ -46,6 +47,6 @@ export const About = () => {
             </div>
             <AboutCard icon={cardData[2].icon} title={cardData[2].title} desc={cardData[2].desc} />
             <AboutCard icon={cardData[3].icon} title={cardData[3].title} desc={cardData[3].desc} />
-        </section>
+        </Container>
     )
 }

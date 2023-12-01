@@ -1,3 +1,4 @@
+import { Container } from '@/hooks/observer';
 import Mail from '../../../public/icons/Contacts-email.svg';
 import Phone from '../../../public/icons/Contacts-phone.svg';
 import Map from '../../../public/icons/Contacts-map.svg';
@@ -13,7 +14,7 @@ export const Contacts = () => {
 
 
     return (
-        <section className={styles.container} id='contacts'>
+        <Container classContainer={styles.container} sectionName={'contacts'}>
             <h2 className={styles.title}>Contact Us</h2>
 
             <div className={styles.contactFormContainer}>
@@ -51,6 +52,6 @@ export const Contacts = () => {
                 </ul>
                 <Form/>
             </div>
-        </section>
+        </Container>
     )
 }

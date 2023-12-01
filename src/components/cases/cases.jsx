@@ -2,6 +2,7 @@
 import Slider from 'react-slick';
 import { CasesCard } from './casesCard';
 import { useRef, useState } from 'react';
+import { Container } from '@/hooks/observer';
 import ArrowRight from '../../../public/icons/Arrow-right-slider.svg';
 import styles from './cases.module.css';
 
@@ -121,7 +122,7 @@ export const Cases = () => {
 
 
     return (
-        <section className={styles.container} id="cases">
+        <Container classContainer={styles.container} sectionName={'cases'}>
             <div className={styles.titleContainer}>
                 <h2 className={styles.title}>Successful cases of our company</h2>
                 <div className={styles.verticalLine}></div>
@@ -142,7 +143,7 @@ export const Cases = () => {
                 ))}
                 
             </Slider>
-        </section>
+        </Container>
     )
 }
 

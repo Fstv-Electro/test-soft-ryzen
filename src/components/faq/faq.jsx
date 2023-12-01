@@ -1,7 +1,8 @@
 import { FaqItem } from './faqItem';
 import { ContactLink } from '../../atoms/contactLink';
-import styles from './faq.module.css';
 import { useState } from 'react';
+import { Container } from '@/hooks/observer';
+import styles from './faq.module.css';
 
 
 const faqData = [
@@ -40,7 +41,7 @@ export const Faq = () => {
     }
 
     return (
-        <section className={styles.container} id="faq">
+        <Container classContainer={styles.container} sectionName={'faq'}>
             <h2 className={styles.title}>Frequently Asked Questions</h2>
             <ul className={styles.faqList}>
                 {faqData && faqData.map((item, index) => (
@@ -57,6 +58,6 @@ export const Faq = () => {
                     <ContactLink text={'Contact Us'} classLink={styles.contactsLink} classText={styles.linkText} classIcon={styles.icon}/>
                 </div>
             </div>
-        </section>
+        </Container>
     )
 }

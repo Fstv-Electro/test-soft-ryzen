@@ -10,6 +10,7 @@ import { Cases } from "@/components/cases/cases";
 import { Faq } from "@/components/faq/faq";
 import { Contacts } from "@/components/contacts/contacts";
 import { Footer } from "@/components/footer/footer";
+import { Modal } from "@/components/modal/Modal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function Home() {
         <Faq />
         <Contacts />
         <Footer />
+        <Modal />
       </main>
     </>
   );
