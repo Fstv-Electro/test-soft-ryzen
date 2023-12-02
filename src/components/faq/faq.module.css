@@ -137,7 +137,7 @@
 }
 
 .secondTitle {
-  text-align: start;
+  text-align: center;
   font-size: 28px;
   line-height: 28px; /* 100% */
   text-transform: uppercase;
@@ -167,7 +167,11 @@
   }
 
   .faqList {
-    width: calc(50% - 12px);
+    width: calc(50% - 24px);
+  }
+
+  .contactContainer {
+    width: calc(50% - 24px);
   }
 }
 
@@ -175,6 +179,7 @@
   .container {
     max-width: 1280px;
     margin-top: 120px;
+    gap: 48px;
   }
   .secondTitle {
     font-size: 48px;
