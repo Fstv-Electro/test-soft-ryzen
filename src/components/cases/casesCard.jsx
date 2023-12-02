@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { GoArrowUpRight } from "react-icons/go";
+import ArrowRight from '../../../public/icons/Arrow-right.svg'
 import styles from './cases.module.css';
 
 
@@ -15,7 +15,7 @@ export const CasesCard = ({image, region, caseLink, caseDisc, date}) => {
                     <p>{region.location}</p>
                     <p>{region.company}</p>
                 </div>
-                <button className={styles.linkBtn} type='button' onClick={() => caseLink()}><GoArrowUpRight/></button>
+                <button className={styles.linkBtn} type='button' onClick={() => caseLink()}><ArrowRight/></button>
             </div>
             <div className={styles.caseContainer}>
                 <div className={styles.line}></div>

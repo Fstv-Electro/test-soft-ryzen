@@ -55,13 +55,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 68px;
-  height: 68px;
+  width: 66px;
+  height: 66px;
   padding: 15px;
   border-radius: 100px;
   border: 1px solid #173d33;
   background-color: transparent;
   cursor: pointer;
+}
+
+.slideBtn,
+.slideBtnLeft {
+  stroke-width: 0.5;
 }
 
 .slideBtnLeft {
@@ -130,18 +135,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60;
-  height: 60;
+  width: 60px;
   padding: 16px;
   border-radius: 100px;
   border: transparent;
   background: #97d28b;
-}
-
-.linkBtn svg {
-  fill: currentColor;
-  width: 28px;
-  height: 28px;
+  rotate: -45deg;
 }
 
 .linkBtn:hover {

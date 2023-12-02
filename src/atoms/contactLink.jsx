@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Ellipse from '../../public/icons/Ellipse.svg';
 import ArrowRight from '../../public/icons/Arrow-right.svg';
 
 export const ContactLink = ({ text, classLink, classText, classIcon }) => {

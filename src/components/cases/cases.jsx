@@ -1,9 +1,9 @@
 'use client'
 import Slider from 'react-slick';
 import { CasesCard } from './casesCard';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Container } from '@/hooks/observer';
-import ArrowRight from '../../../public/icons/Arrow-right-slider.svg';
+import ArrowRight from '../../../public/icons/Arrow-right.svg';
 import styles from './cases.module.css';
 
 const slidesData = [
@@ -76,9 +76,28 @@ const slidesData = [
 
 export const Cases = () => {
     const sliderRef = useRef(null);
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(2);
+
+    useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 768) {
+        setCurrentSlide(1);
+      } else {
+        setCurrentSlide(2);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
     const slideSetting = {
+        dots: true,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 2,
@@ -87,9 +106,13 @@ export const Cases = () => {
     initialSlide: 0,
     arrows: false,
     draggable: true,
-    afterChange: (index) => {
-        setCurrentSlide(index)
-    },
+        afterChange: (index) => {
+            if (index === 4) {
+                setCurrentSlide(index + 1)
+            } else {
+                setCurrentSlide(index + 2)
+            }
+        },
     responsive: [
         {
             breakpoint: 768,
@@ -103,15 +126,13 @@ export const Cases = () => {
                 initialSlide: 0,
                 arrows: false,
                 afterChange: (index) => {
-                    setCurrentSlide(index)    
+                    setCurrentSlide(index + 1)    
                 },
             }
         }
     ]
     };
-
-
-
+    
     const prevSlide = () => {
         sliderRef.current.slickPrev();
     };
@@ -120,14 +141,13 @@ export const Cases = () => {
         sliderRef.current.slickNext();
     };
 
-
     return (
         <Container classContainer={styles.container} sectionName={'cases'}>
             <div className={styles.titleContainer}>
                 <h2 className={styles.title}>Successful cases of our company</h2>
                 <div className={styles.verticalLine}></div>
                 <div className={styles.slideSwitchers}>
-                    <p><span className={styles.slideCurrentText}>{currentSlide === 5 ? currentSlide : currentSlide + 1}</span> / {slidesData.length}</p>
+                <p><span className={styles.slideCurrentText}>{currentSlide}</span> / {slidesData.length}</p>
                     <div className={styles.slideBtns}>
                         <button className={styles.slideBtnLeft} type='button' onClick={prevSlide}><ArrowRight/></button>
                         <button className={styles.slideBtn} type='button' onClick={nextSlide}><ArrowRight/></button>
