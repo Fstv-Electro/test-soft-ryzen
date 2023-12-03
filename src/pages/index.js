@@ -9,7 +9,7 @@ import { Cases } from "@/components/cases/cases";
 import { Faq } from "@/components/faq/faq";
 import { Contacts } from "@/components/contacts/contacts";
 import { Footer } from "@/components/footer/footer";
-import { ModalMenu } from "@/components/modal/Modal";
+import { ModalMenu } from "@/components/modal/modal";
 
 import styles from "@/styles/Home.module.css";
 
