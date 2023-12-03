@@ -3,13 +3,13 @@ import LogoIcon from '../../public/icons/Logo.svg';
 import styles from './logo.module.css';
 
 
-export const Logo = () => {
+export const Logo = ({isHeader}) => {
     const { currentSection } = useGlobalContext();
 
     return (
         <div className={styles.logoContainer}>
             <LogoIcon />
-            <p className={styles.logoText} style={{color: currentSection !== null ? '#97d28b' : '#173D33'}}>ecosolution</p>
+            <p className={currentSection !== null  && isHeader ? styles.logoActiveText : styles.logoText}>ecosolution</p>
             <div className={styles.textGreenEnergy}><p><span className={styles.textGreen}>green</span>enry</p>for life</div>
         </div>
     )

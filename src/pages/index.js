@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import { Header } from "@/components/header/header";
 import { Banner } from "@/components/banner/banner";
 import { About } from "@/components/about/about";
@@ -10,7 +9,9 @@ import { Cases } from "@/components/cases/cases";
 import { Faq } from "@/components/faq/faq";
 import { Contacts } from "@/components/contacts/contacts";
 import { Footer } from "@/components/footer/footer";
-import { Modal } from "@/components/modal/Modal";
+import { ModalMenu } from "@/components/modal/Modal";
+
+import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +34,7 @@ export default function Home() {
         <Faq />
         <Contacts />
         <Footer />
-        <Modal />
+        <ModalMenu />
       </main>
     </>
   );

@@ -5,17 +5,23 @@
   cursor: pointer;
 }
 
-.logoContainer:hover {
-  .logoText {
-    color: #97d28b;
-  }
-}
-
 .logoText {
   font-size: 33px;
   font-weight: 500;
   height: 48px;
   letter-spacing: -1.32px;
+}
+
+.logoActiveText {
+  font-size: 33px;
+  font-weight: 500;
+  height: 48px;
+  letter-spacing: -1.32px;
+  color: #97d28b;
+}
+
+.logoContainer:hover .logoText {
+  color: #97d28b;
 }
 
 .textGreenEnergy {

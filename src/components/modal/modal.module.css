@@ -37,6 +37,10 @@
   cursor: pointer;
 }
 
+.modalBtnClose:hover {
+  color: #97d28b;
+}
+
 .modalNavContainer {
   display: flex;
   flex-direction: column;
@@ -51,6 +55,8 @@
   align-items: flex-start;
   margin-top: 24px;
   gap: 8px;
+  font-size: 24px;
+  letter-spacing: -0.96px;
 }
 
 .modalLine {
@@ -60,13 +66,41 @@
   background-color: #fff;
 }
 
-.modalLink:hover {
+.modalLink,
+.current {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modalLink {
+  color: #ffffff40;
+}
+
+.current {
   color: #97d28b;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  rotate: -45deg;
+}
+.modalLink:hover,
+.current:hover {
+  color: #ffffff;
 }
 
 .modalSocials {
   display: flex;
   gap: 8px;
+}
+
+.modalSocials svg:hover {
+  color: #97d28b;
 }
 
 @media screen and (min-width: 1280px) {

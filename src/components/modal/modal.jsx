@@ -2,12 +2,14 @@ import { useGlobalContext } from "@/store/Context"
 import Link from 'next/link';
 import Facebook from '../../../public/icons/Facebook.svg';
 import Instagram from '../../../public/icons/Instagram.svg';
-import { GoArrowUpRight } from "react-icons/go";
+import ArrowRight from '../../../public/icons/Arrow-right.svg';
 import Close from '../../../public/icons/Closemenu.svg'
 import styles from './modal.module.css';
 
-export const Modal = () => {
-    const { isOpen, toggleModal, modalPosition } = useGlobalContext();
+export const ModalMenu = () => {
+    const { isOpen, toggleModal, modalPosition, currentSection, closeModal } = useGlobalContext();
+
+    // зробити current section
 
     return (
         <>
@@ -18,11 +20,11 @@ export const Modal = () => {
                         <div className={styles.modalLine}></div>
                         <div className={styles.modalNavContainer}>
                             <nav className={styles.modalNav}>
-                            <Link href='/#main' className={styles.modalLink}>Main <GoArrowUpRight /></Link>
-                            <Link href='/#about' className={styles.modalLink}>About <GoArrowUpRight /></Link>
-                            <Link href='/#cases' className={styles.modalLink}>Cases <GoArrowUpRight /></Link>
-                            <Link href='/#faq' className={styles.modalLink}>FAQ <GoArrowUpRight /></Link>
-                            <Link href='/#contacts' className={styles.modalLink}>Contact Us <GoArrowUpRight /></Link>
+                                <Link href='/#main' className={currentSection === 'main' ? styles.current : styles.modalLink}  onClick={() => closeModal()}>Main <div className={styles.icon}><ArrowRight /></div></Link>
+                                <Link href='/#about' className={currentSection === 'about' ? styles.current : styles.modalLink} onClick={() => closeModal()}>About <div className={styles.icon}><ArrowRight /></div></Link>
+                                <Link href='/#cases' className={currentSection === 'cases' ? styles.current : styles.modalLink} onClick={() => closeModal()}>Cases <div className={styles.icon}><ArrowRight /></div></Link>
+                                <Link href='/#faq' className={currentSection === 'faq' ? styles.current : styles.modalLink} onClick={() => closeModal()}>FAQ <div className={styles.icon}><ArrowRight /></div></Link>
+                                <Link href='/#contacts' className={currentSection === 'contacts' ? styles.current : styles.modalLink} onClick={() => closeModal()}>Contact Us <div className={styles.icon}><ArrowRight /></div></Link>
                             </nav>
                             <div className={styles.modalSocials}>
                                 <Facebook />

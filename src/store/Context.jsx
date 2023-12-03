@@ -18,12 +18,17 @@ export const GlobalProvider = ({ children }) => {
         setIsOpen(!isOpen);
     }
 
+    const closeModal = () => {
+        setIsOpen(false);
+    }
+
     const handleCrntSection = (name) => {
         setCurrentSection(name)
     }
 
     const valueGlobalProvider = {
         isOpen,
+        closeModal,
         toggleModal,
         currentSection,
         handleCrntSection,

@@ -10,7 +10,7 @@ export const Header = () => {
 
     return (
         <header className={styles.header}>
-            <Logo />
+            <Logo isHeader={true}/>
             <nav className={styles.navContainer}>
                 <button className={styles.navMenuBtn} onClick={(e) => toggleModal(e)}><Burger/></button>
                 <ContactLink text={'Get in touch'} classLink={styles.contactsLink} classText={styles.linkText} classIcon={styles.icon}/>

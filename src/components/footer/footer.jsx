@@ -12,7 +12,7 @@ export const Footer = () => {
     return (
         <footer className={styles.container} id='footer'>
             <div className={styles.logotype} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%'}}>
-                <Logo />
+                <Logo isHeader={false}/>
                 <Link href='/#banner' className={styles.linkUp}><ArrowRight/></Link>
             </div>
             <div className={styles.socials}>
