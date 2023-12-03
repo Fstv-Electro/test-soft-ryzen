@@ -8,9 +8,6 @@ import styles from './modal.module.css';
 
 export const ModalMenu = () => {
     const { isOpen, toggleModal, modalPosition, currentSection, closeModal } = useGlobalContext();
-
-    // зробити current section
-
     return (
         <>
             {isOpen && (
